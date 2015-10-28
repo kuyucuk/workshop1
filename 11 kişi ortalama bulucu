@@ -1,41 +1,53 @@
 #include <iostream>
-
 using namespace std;
 
 int vize[10],final[10],notlar[10];
 
-
 int main()
 {
 	
-	cout<<"Notu 50 üzeri olan ogrenciler gecmistir, 50 alti olan ogranciler kalmistir."<<endl<<endl;
+	cout<<"Ogrencilerin notunu hesaplayan, ortalama alan program";
+	
+	cout<<"Notu 50 uzeri olan ogrenciler gecmistir, 50 alti olan ogranciler kalmistir."<<endl<<endl;
+	
+	vize[0]= 30;
+	vize[1]= 50;
+	vize[2]= 45;
+	vize[3]= 80;
+	vize[4]= 15;
+	vize[5]= 50;
+	vize[6]= 45;
+	vize[7]= 30;
+	vize[8]= 95;
+	vize[9]= 45;
+	vize[10]= 100;
+	
+	final[0]= 50;
+	final[1]= 25;
+	final[2]= 50;
+	final[3]= 100;
+	final[4]= 90;
+	final[5]= 50;
+	final[6]= 85;
+	final[7]= 85;
+	final[8]= 15;
+	final[9]= 35;
+	final[10]= 90;
 	
 	for (int i=0;i<11;i++)
 	{
-		cout<<i+1<<". kisinin vize notunu giriniz: ";
-		
-		cin>>vize[i];
-		
-		cout<<i+1<<". kisinin final notunu giriniz: ";
-		
-		cin>>final[i];
 		
 		notlar[i]=(vize[i]+final[i])/2;
 		
-		
-		
 		cout<<i+1<<". kisinin ortalamasi: "<<notlar[i];
 		
-		if(notlar[i]<=50)
+		if(notlar[i]<50)
 		cout<<" Kaldi"<<endl<<"--------------------------------"<<endl;
-		if(notlar[i]>50)
+		if(notlar[i]>=50)
 		cout<<" Gecti"<<endl<<"--------------------------------"<<endl;
 		
 	}
 	
-	
-	
 	cout<<"Sinifin genel ortalamasi: "<<(notlar[0]+notlar[1]+notlar[2]+notlar[3]+notlar[4]+notlar[5]+notlar[6]+notlar[7]+notlar[8]+notlar[9]+notlar[10])/11;
-	
 	
 }
